@@ -11,6 +11,11 @@ import javax.ws.rs.core.MediaType;
  * Created by nhristov on 1/14/14.
  */
 public interface UserService {
+    @Path("user/{id}")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    String getUser(@PathParam("id") String id);
+
     @Path("users")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
